@@ -33,9 +33,25 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
+module ex2(a,b,c,d,o);
+input a,b,c,d;
+output o;
+assign o=((~a & ~b & ~c & ~d)|(a & ~c & ~d)|(~b & c & ~d)|(~a & b & c & d)|(b & ~c & d));
+endmodule
+
+
+
+module ex22(w,x,y,z,o);
+input w,x,y,z;
+output o;
+assign o=((x & ~y & z)|( ~x & ~y & z )|( ~w & x & y)|(w & ~x & y)|(w & x & y));
+endmodule 
+
+
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:*/
+Developed by: praveena D 
+RegisterNumber: 24003392
 
 
 **RTL realization**
@@ -44,19 +60,11 @@ Developed by: RegisterNumber:*/
 ![Screenshot 2024-12-06 104602](https://github.com/user-attachments/assets/25ac50bb-6577-4d50-b64a-e3ca0e2a04ae)
 
 
-**Output:**
-![Screenshot 2024-11-28 143130](https://github.com/user-attachments/assets/d25e4a93-adec-4ba0-88b2-113fa8f87717)
-
-
 
 **RTL**
 ![Screenshot 2024-11-29 154310](https://github.com/user-attachments/assets/02666618-28e9-4d88-8020-98a5884419c2)
 ![image](https://github.com/user-attachments/assets/4b212a1f-aa45-4204-a981-b6055cd4fe1a)
 
-
-
-
-**Timing Diagram**
 
 **Result:**
 
